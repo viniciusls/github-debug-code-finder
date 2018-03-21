@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "GitHub Debug Code Finder",
+  "description": "Browser extension to find debug code (like console.log, print_r, die) on GitHub files/pull request",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  
+  "permissions": [
+    "activeTab"
+  ]
+}
