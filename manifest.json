@@ -10,14 +10,14 @@
   },
 
   "icons": {
-    "48": "icon-48.png",
-    "128": "icon-128.png"
+    "48": "icon.png",
+    "128": "icon.png"
   },
 
   "content_scripts": [
     {
       "js": [
-        "src/highlight.js"
+        "highlight.js"
       ],
       "matches": [
         "https://github.com/*"

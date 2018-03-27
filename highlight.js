@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-    highlight("die");
+    //highlight("die");
     highlight("console.error");
     highlight("console.info");
     highlight("console.log");
