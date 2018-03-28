@@ -8,7 +8,8 @@ window.addEventListener('load', function () {
     setTimeout(function() {
         var nodesHighlighted = document.getElementsByClassName("gh-debug-finder-highlighted");
 
-        callSnackbar("Foram encontrados " + nodesHighlighted.length + " códigos referentes à debug");
+        callSnackbar("Foram encontrados " + nodesHighlighted.length + " códigos referentes à debug (<a href='javascript:void(0)' id='closeSnackbar'>Fechar</a>)");
+        document.getElementById('closeSnackbar').addEventListener('click', closeSnackbar);
     }, 2000);
     
 });
@@ -96,7 +97,11 @@ function callSnackbar(text) {
 
     // Add the "show" class to DIV
     elSnackbar.className = "show";
+}
 
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function () { elSnackbar.className = elSnackbar.className.replace("show", ""); }, 10000);
+function closeSnackbar() {
+    // Get the snackbar DIV
+    var elSnackbar = document.getElementById("snackbar");
+
+    elSnackbar.className = elSnackbar.className.replace("show", "");
 }
